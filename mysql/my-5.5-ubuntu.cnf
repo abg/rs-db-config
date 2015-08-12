@@ -1,0 +1,101 @@
+[mysqld]
+## General
+datadir                         = /var/lib/mysql
+tmpdir                          = /var/lib/mysqltmp
+socket                          = /var/run/mysqld/mysqld.sock
+skip-name-resolve
+sql-mode                        = NO_ENGINE_SUBSTITUTION
+#event-scheduler                = 1
+user                            = mysql
+pid-file                        = /var/run/mysqld/mysqld.pid
+log_error                       = /var/log/mysql/error.log
+basedir                         = /usr
+lc-messages-dir                 = /usr/share/mysql
+skip-external-locking
+
+## Cache
+thread-cache-size               = 16
+table-open-cache                = 4096
+table-definition-cache          = 2048
+query-cache-size                = 32M
+query-cache-limit               = 1M
+
+## Per-thread Buffers
+sort-buffer-size                = 1M
+read-buffer-size                = 1M
+read-rnd-buffer-size            = 1M
+join-buffer-size                = 1M
+
+## Temp Tables
+tmp-table-size                  = 32M
+max-heap-table-size             = 64M
+
+## Networking
+back-log                        = 100
+#max-connections                = 200
+max-connect-errors              = 10000
+max-allowed-packet              = 16M
+interactive-timeout             = 3600
+wait-timeout                    = 600
+bind-address                    = 127.0.0.1
+port                            = 3306
+
+### Storage Engines
+#default-storage-engine         = InnoDB
+innodb                          = FORCE
+
+## MyISAM
+key-buffer-size                 = 64M
+myisam-sort-buffer-size         = 128M
+myisam-recover                  = BACKUP
+
+## InnoDB
+#innodb-buffer-pool-size        = 128M
+#innodb-log-file-size           = 100M
+#innodb-log-buffer-size         = 8M
+#innodb-file-per-table          = 1
+#innodb-open-files              = 300
+
+## Replication
+server-id                       = 1
+#log-bin                        = /var/log/mysql/bin-log
+#relay-log                      = /var/log/mysql/relay-log
+relay-log-space-limit           = 16G
+expire-logs-days                = 10
+#read-only                       = 1
+max_binlog_size                 = 100M
+#sync-binlog                     = 1
+#log-slave-updates               = 1
+#binlog-format                   = STATEMENT
+#auto-increment-offset           = 1
+#auto-increment-increment        = 2
+
+## Logging
+#log-output                      = FILE
+#slow-query-log                  = 1
+#slow-query-log-file             = /var/log/mysql/slow-log
+#log-slow-slave-statements
+#long-query-time                 = 2
+
+[mysqld_safe]
+socket                          = /var/run/mysqld/mysqld.sock
+nice                            = 0
+log-error                       = /var/log/mysqld.log
+open-files-limit                = 65535
+
+[mysql]
+no-auto-rehash
+
+[mysqldump]
+quick
+quote-names
+max_allowed_packet              = 16M
+
+# Remember to edit /etc/mysql/debian.cnf when changing the socket location.
+[client]
+port                            = 3306
+socket                          = /var/run/mysqld/mysqld.sock
+
+# * IMPORTANT: Additional settings that can override those from this file!
+#   The files must end with '.cnf', otherwise they'll be ignored.
+!includedir /etc/mysql/conf.d/
