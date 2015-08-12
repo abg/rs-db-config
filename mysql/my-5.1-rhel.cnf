@@ -1,5 +1,5 @@
 ##  _______________________________________________________________________ 
-## / Rackspace MySQL 5.1 Terse Configuration File v2.12                    \
+## / Rackspace MySQL 5.1 Configuration File v2.12                          \
 ## |                                                                       |
 ## | This is a base configuration file containing the most frequently used |
 ## | settings with reasonably defined default values for configuring and   |
@@ -10,16 +10,7 @@
 ## | While the settings provided are likely sufficient for most            |
 ## | situations, an exhaustive list of settings (with descriptions) can be |
 ## | found at:                                                             |
-## | http://dev.mysql.com/doc/refman/5.1/en/server-system-variables.html   |
-## |                                                                       |
-## | Further configuration file examples (with and without comments) can   |
-## | be found in @@@mysql_server_docdir@@@.                                |
-## |                                                                       |
-## | Take care to only add/remove/change a setting if you are comfortable  |
-## | doing so! For Rackspace customers, if you have any questions or       |
-## | concerns, please contact the MySQL Database Services Team. Be aware   |
-## | that some work performed by this team can involve additional billable |
-## \ fees.                                                                 /
+## \ http://dev.mysql.com/doc/refman/5.1/en/server-system-variables.html   /
 ##  ----------------------------------------------------------------------- 
 ##         \   ^__^
 ##          \  (oo)\_______
