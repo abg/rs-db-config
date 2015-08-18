@@ -1,5 +1,5 @@
-##  _______________________________________________________________________ 
-## / Rackspace MySQL 5.5 Configuration File                                \
+##  _______________________________________________________________________
+## / Rackspace MySQL 5.5 Configuration File v1.00                          \
 ## |                                                                       |
 ## | This is a base configuration file containing the most frequently used |
 ## | settings with reasonably defined default values for configuring and   |
@@ -11,7 +11,7 @@
 ## | situations, an exhaustive list of settings (with descriptions) can be |
 ## | found at:                                                             |
 ## \ http://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html   /
-##  ----------------------------------------------------------------------- 
+##  -----------------------------------------------------------------------
 ##         \   ^__^
 ##          \  (oo)\_______
 ##             (__)\       )\/\
@@ -32,7 +32,7 @@ sql-mode                        = NO_ENGINE_SUBSTITUTION
 thread-cache-size               = 16
 table-open-cache                = 4096
 table-definition-cache          = 2048
-query-cache-size                = 32M 
+query-cache-size                = 32M
 query-cache-limit               = 1M
 
 ## Per-thread Buffers
@@ -42,8 +42,8 @@ read-rnd-buffer-size            = 1M
 join-buffer-size                = 1M
 
 ## Temp Tables
-tmp-table-size                  = 32M 
-max-heap-table-size             = 64M 
+tmp-table-size                  = 32M
+max-heap-table-size             = 64M
 
 ## Networking
 back-log                        = 100
@@ -58,7 +58,7 @@ wait-timeout                    = 600
 innodb                          = FORCE
 
 ## MyISAM
-key-buffer-size                 = 64M 
+key-buffer-size                 = 64M
 myisam-sort-buffer-size         = 128M
 
 ## InnoDB
