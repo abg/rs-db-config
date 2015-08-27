@@ -10,7 +10,9 @@
 ## | For many deployments, the only variables which need to be modified    |
 ## | below are max-connections and innodb-buffer-pool-size.                |
 ## |                                                                       |
-## \ http://dev.mysql.com/doc/refman/5.6/en/server-system-variables.html   /
+## | http://dev.mysql.com/doc/refman/5.6/en/server-system-variables.html   |
+## |                                                                       |
+## \ Based on v3.0.0    https://github.com/rackerlabs/rs-db-config         /
 ##  -----------------------------------------------------------------------
 ##         \   ^__^
 ##          \  (oo)\_______
